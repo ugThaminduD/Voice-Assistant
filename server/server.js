@@ -14,11 +14,29 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-app.get("/", (req, res) => {
-  res.send("Backend is running...");
-});
+//DB connect
+// const MONGO_DB_URL='mongodb+srv://born_to_battle:BTB69@borntobattle.0k5sqj7.mongodb.net/BornToBattle?retryWrites=true&w=majority'
+// const MONGO_DB_URL= process.env.MONGO_DB_URL
 
-// Example API Route
-app.get("/api/message", (req, res) => {
-  res.json({ message: "Hello from the backend!" });
-});
+// mongoose
+//   .connect(MONGO_DB_URL)
+//   .then(() => {
+//     console.log("DB connected");
+//   })
+//   .catch((err) => {
+//     console.log("DB connection error", err);
+//   });
+
+
+
+
+
+
+// app.get("/", (req, res) => {
+//   res.send("Backend is running...");
+// });
+
+// // Example API Route
+// app.get("/api/message", (req, res) => {
+//   res.json({ message: "Hello from the backend!" });
+// });
