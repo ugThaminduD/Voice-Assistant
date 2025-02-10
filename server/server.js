@@ -6,7 +6,11 @@ require("dotenv").config();
 const app = express();
 
 // Middleware
-app.use(cors()); // Allow requests from frontend
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);                                         // Allow requests from frontend
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
@@ -26,11 +30,6 @@ app.listen(PORT, () => {
 //   .catch((err) => {
 //     console.log("DB connection error", err);
 //   });
-
-
-
-
-
 
 // app.get("/", (req, res) => {
 //   res.send("Backend is running...");
