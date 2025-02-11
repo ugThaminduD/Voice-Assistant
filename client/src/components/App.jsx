@@ -1,10 +1,14 @@
 import { useState } from 'react'
+import { useNavigate } from "react-router-dom";
+
 import reactLogo from '../assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const navigate = useNavigate();
+
 
   return (
     <>
@@ -20,6 +24,9 @@ function App() {
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
+        </button>
+        <button onClick={() => navigate("/login")}>
+          Login
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
