@@ -37,3 +37,6 @@ app.use(signupRouter);
 
 const loginsRouter = require("./routes/LoginRoutes");
 app.use(loginsRouter);
+
+const authCheckRouter = require("./routes/AuthCheckRoutes");
+app.use(authCheckRouter);

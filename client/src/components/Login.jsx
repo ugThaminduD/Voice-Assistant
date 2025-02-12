@@ -29,7 +29,7 @@ const Login = () => {
             localStorage.setItem("token", data.token); // Save token
 
             alert("Sign In successful, Wellcome! ");
-            navigate("/dashboard"); 
+            navigate("/"); 
             // window.location.href = "/dashboard";
 
         } catch (err) {
