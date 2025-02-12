@@ -27,6 +27,7 @@ const Dashboard = () => {
 
           if (data.isAuthenticated) {
             setIsLoggedIn(true);
+            localStorage.removeItem("voiceCommandCount");
           }
         } catch (error) {
           console.error("Authentication check failed:", error);
